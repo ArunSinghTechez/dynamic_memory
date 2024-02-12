@@ -13,7 +13,10 @@ int main(){
         printf("enter the element\t");
         scanf("%d",ptr + i);
     }
-
+    if (ptr == NULL){
+        return 1;
+    }
+    else
     for(int i = 0;i<n;i++){
         printf("the element is :%d\t",*(ptr+i));
     }
