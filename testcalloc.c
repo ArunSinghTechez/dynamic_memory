@@ -13,17 +13,28 @@ int main(){
    // }
 
     if(cptr==NULL){
-        printf("memory not allocated");
+        printf("memory not allocated please free some memeory");
         return 1;
     }
 
     else    {
+        printf("memeory has been allocated sucessfully\n");
     for(int i = 0;i<num;i++){
         //printf("the elements are: %d\t",*(cptr+i));
         printf("the elements are :%d\t",cptr[i]);
     }
     }
     
+    free(cptr);
+    cptr = NULL;
+
+    if(cptr == NULL){
+        printf("\nyes memeory free\n");
+    }
+    for(int i = 0;i<num;i++){
+        //printf("the elements are: %d\t",*(cptr+i));
+        printf("the elements are :%d\t",cptr[i]);
+    }
 
 
 

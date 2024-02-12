@@ -23,11 +23,18 @@ int main() {
     }
 
 
+    free(mptr);
+    mptr = NULL;
+    if(mptr == NULL){
+        printf("yes it is free now\n");
+    }
 
 
 
-
-
+     for(int i =0;i<n;i++){
+       // printf("the elements are: %d\t",*(mptr+i));
+       printf("\nthe elements are :%d\t",mptr[i]);
+    }
     getchar();
     return 0;
 }
